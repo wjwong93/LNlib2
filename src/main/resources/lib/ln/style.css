@@ -1,0 +1,26 @@
+.dialog-button {
+    -fx-background-color: dodgerblue;
+    -fx-text-fill: white;
+}
+
+.dialog-button:hover {
+    -fx-background-color: #4ba6ff;
+}
+
+.bar-button {
+    -fx-background-color: turquoise;
+    -fx-text-fill: white;
+}
+
+.bar-button:hover {
+    -fx-background-color: #66e6d9;
+}
+
+.save-button {
+    -fx-background-color: mediumspringgreen;
+    -fx-text-fill: white;
+}
+
+.save-button:hover {
+    -fx-background-color: lightgreen;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="card" alignment="CENTER" onMouseClicked="#openSeries" prefHeight="200.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ln.SeriesCardController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="131.0">
+         <children>
+            <ImageView fx:id="cover" fitHeight="180.0" fitWidth="131.0" onMouseClicked="#expandImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@placeholder-image.png" />
+               </image>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ImageView>
+         </children>
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="180.0" prefWidth="650.0" style="-fx-border-color: #acacac; -fx-border-radius: 5; -fx-background-color: #ffffff;">
+         <children>
+            <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" prefHeight="181.0" prefWidth="594.0">
+               <children>
+                  <Label fx:id="seriesName" prefHeight="25.0" prefWidth="523.0" text="デート・ア・ライブ">
+                     <font>
+                        <Font name="Calibri Bold" size="36.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="Author:" textFill="#6f6f6f">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="authorName" prefHeight="30.0" prefWidth="150.0" text="Author" textFill="#6f6f6f">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="Illustrator:" textFill="#6f6f6f">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="illustratorName" layoutX="151.0" layoutY="10.0" prefHeight="30.0" prefWidth="150.0" text="Illustrator" textFill="#6f6f6f">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="bookCount" text="22" textFill="#6f6f6f">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="150.0" text="books" textFill="#6f6f6f">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="55.0" visible="false">
+               <children>
+                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#editSeries" prefHeight="85.0" prefWidth="46.0" text="Edit">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="deleteButton" layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#confirmDelete" prefHeight="85.0" prefWidth="46.0" text="Del">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>

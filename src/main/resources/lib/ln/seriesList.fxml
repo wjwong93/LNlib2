@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ln.SeriesListController">
+   <children>
+      <StackPane fx:id="root" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <VBox layoutY="42.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: lightskyblue;">
+                           <children>
+                              <JFXHamburger prefHeight="114.0" prefWidth="45.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </JFXHamburger>
+                              <Label alignment="CENTER" text="Light Novel Library" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="800.0" style="-fx-background-color: gray;">
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="1000.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Number of Series:" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="seriesCount" text="1" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="1000.0">
+                                 <children>
+                                    <JFXButton fx:id="addSeriesButton" onAction="#addSeries" styleClass="bar-button" stylesheets="@style.css" text="Add New Series" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="viewCSVsButton" onAction="#viewCSVs" styleClass="save-button" stylesheets="@style.css" text="View CSV List" textFill="WHITE">
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="2.0" right="2.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="350.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <AnchorPane prefHeight="382.0" prefWidth="780.0">
+                                 <children>
+                                    <VBox fx:id="seriesList" alignment="TOP_CENTER" prefHeight="491.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
